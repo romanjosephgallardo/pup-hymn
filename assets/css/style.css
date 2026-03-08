@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Main Colors */
+  --maroon: #880015;
+  --yellow: #f8c107;
+  --off-white: #f9f4ec;
+  --gold: #d4a017;
+  --text-dark: #2a0a0a;
+
+  /* Font Naming Assigning */
+  --Poppins: "Poppins", sans-serif;
+  --AppleGaramond: "Apple Garamond", sans-serif;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Poppins";
+  src:
+    url("../fonts/Poppins.ttf") format("ttf"),
+    url("../fonts/Poppins.woff") format("woff"),
+    url("../fonts/Poppins.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Apple Garamond";
+  src:
+    url("../fonts/AppleGaramond.ttf") format("ttf"),
+    url("../fonts/AppleGaramond.woff") format("woff"),
+    url("../fonts/AppleGaramond.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--Poppins);
+  min-width: 1080px;
+  background: url(../images/pup_hymn_background.png) no-repeat center center
+    fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
