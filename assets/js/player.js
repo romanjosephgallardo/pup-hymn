@@ -129,10 +129,10 @@ karaokeBtn.addEventListener("click", function () {
 
   if (!karaokeBtn.classList.contains("active")) {
     // Switch to backing track
-    audio.src = "/assets/mp3/imno_ng_pup_backing_track.mp3";
+    audio.src = "assets/mp3/imno_ng_pup_backing_track.mp3";
   } else {
     // Switch back to original
-    audio.src = "/assets/mp3/imno_ng_pup.mp3";
+    audio.src = "assets/mp3/imno_ng_pup.mp3";
   }
 
   karaokeBtn.classList.toggle("active");
