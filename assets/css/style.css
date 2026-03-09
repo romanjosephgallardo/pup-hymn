@@ -13,13 +13,13 @@
   --text-dark: #2a0a0a;
 
   /* Font Naming Assigning */
-  --Poppins: "Poppins", sans-serif;
+  /* --Poppins: "Poppins", sans-serif;
   --AppleGaramond: "Apple Garamond", sans-serif;
-  --PlayfairDisplay: "Playfair Display", serif;
+  --PlayfairDisplay: "Playfair Display", serif; */
 }
 
 /* ===== Fonts ===== */
-@font-face {
+/* @font-face {
   font-family: "Apple Garamond";
   src:
     url("../fonts/AppleGaramond.ttf") format("ttf"),
@@ -34,7 +34,8 @@
   src: url("../fonts/PlayfairDisplay-Regular.ttf") format("ttf");
   font-style: normal;
   font-weight: normal;
-}
+} */
+
 body {
   margin: 0;
   padding: 0;
@@ -154,7 +155,7 @@ body {
 .container {
   width: 250px;
   height: 250px;
-  background-color: var(--maroon); /* visible against white page */
+  background-color: var(--maroon); 
   border-radius: 10px;
   position: relative;
   box-shadow: 6px 6px 0 0 var(--gold);
@@ -184,9 +185,9 @@ body {
 .plate .black {
   width: 200px;
   height: 200px;
-  background-color: var(--text-dark); /* darker vinyl */
+  background-color: var(--text-dark); 
   animation: rotation 2s infinite linear;
-  animation-play-state: paused; /* Start paused */
+  animation-play-state: paused; 
 }
 
 @keyframes rotation {
