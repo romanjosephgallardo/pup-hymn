@@ -34,20 +34,30 @@ loopBtn.addEventListener("click", function () {
 });
 
 // ===== Volume =====
+var savedVolume = 1;
+
 volumeSlider.addEventListener("input", function () {
   audio.volume = this.value;
   if (this.value == 0) {
+    audio.muted = true;
     volIcon.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
   } else {
+    audio.muted = false;
+    savedVolume = this.value;
     volIcon.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
   }
 });
 
 volIcon.addEventListener("click", function () {
-  audio.muted = !audio.muted;
-  if (audio.muted) {
+  if (!audio.muted) {
+    savedVolume = audio.volume;
+    audio.muted = true;
+    volumeSlider.value = 0;
     volIcon.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
   } else {
+    audio.muted = false;
+    audio.volume = savedVolume;
+    volumeSlider.value = savedVolume;
     volIcon.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
   }
 });
