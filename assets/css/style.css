@@ -124,3 +124,51 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+/* Music Player Section */
+.music-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--off-white);
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  border: var(--yellow) solid 8px;
+  border-radius: 100px;
+
+  background: var(--off-white);
+  border-radius: 16px;
+  padding: 40px;
+  width: 60%;
+  max-width: 60%;
+  min-width: auto;
+  min-height: 20%;
+}
+
+.cd-container {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lyrics-container {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 24px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.lyric-box p {
+  font-family: var(--Poppins);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--off-white);
+}
+
