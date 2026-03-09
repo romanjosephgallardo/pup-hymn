@@ -188,6 +188,7 @@ body {
   height: 200px;
   background-color: var(--text-dark); /* darker vinyl */
   animation: rotation 2s infinite linear;
+  animation-play-state: paused; /* Start paused */
 }
 
 @keyframes rotation {
@@ -515,7 +516,18 @@ body {
 .lyric-box p.active {
   color: var(--maroon);
   font-weight: 700;
+  font-size: 14px;
   transform: scale(1.08);
+  margin-left: 12px;
+}
+
+.lyric-box #writers {
+  font-family: var(--Poppins);
+  font-size: 10px;
+  color: var(--maroon);
+  font-weight: 600;
+  margin-top: 8px;
+  line-height: 12px;
 }
 
 /* Watermark */
@@ -526,6 +538,7 @@ body {
   font-weight: 600;
   text-align: center;
   margin-top: 8px;
+
 }
 
 .lyrics-box-wrap #name {

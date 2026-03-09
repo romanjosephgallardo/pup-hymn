@@ -1,0 +1,253 @@
+/* ===== RESPONSIVE / MEDIA QUERIES ===== */
+
+/* --- Tablet (768px and below) --- */
+@media (max-width: 768px) {
+
+  /* Stack player vertically */
+  .music-player {
+    flex-direction: column;
+    padding: 28px;
+    gap: 20px;
+    max-width: 500px;
+    min-height: auto;
+  }
+
+  /* CD container full width */
+  .cd-container {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Vinyl — slightly smaller */
+  .container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 16px auto;
+  }
+
+  .plate .black {
+    width: 160px;
+    height: 160px;
+  }
+
+  .plate .border {
+    width: 130px;
+    height: 130px;
+  }
+
+  .center-img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .player .circ {
+    width: 35px;
+    height: 35px;
+  }
+
+  .player .rect {
+    width: 12px;
+    height: 65px;
+  }
+
+  /* Song info */
+  .song-title {
+    font-size: 18px;
+  }
+
+  .artist-name {
+    font-size: 11px;
+  }
+
+  /* Progress bar */
+  .progress-wrap {
+    width: 90%;
+  }
+
+  /* Controls */
+  .controls-row {
+    gap: 10px;
+  }
+
+  .karaoke-btn,
+  .loop-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .play-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  #volumeSlider {
+    width: 60px;
+  }
+
+  /* Lyrics section full width */
+  .lyrics-box-wrap {
+    flex: none;
+    width: 100%;
+  }
+
+  .lyrics-container {
+    max-height: 250px;
+    padding: 20px 18px;
+  }
+
+  .lyric-box p {
+    font-size: 13px;
+    line-height: 2;
+  }
+}
+
+
+/* --- Mobile (480px and below) --- */
+@media (max-width: 480px) {
+
+  .music-player {
+    padding: 16px;
+    gap: 12px;
+    max-width: 90vw;
+    border-width: 4px;
+    border-radius: 12px;
+  }
+
+  /* Vinyl — smaller */
+  .container {
+    width: 130px;
+    height: 130px;
+    box-shadow: 3px 3px 0 0 var(--gold);
+    border-radius: 8px;
+  }
+
+  .plate .black {
+    width: 105px;
+    height: 105px;
+  }
+
+  .plate .border {
+    width: 85px;
+    height: 85px;
+  }
+
+  .plate .white {
+    width: 32px;
+    height: 32px;
+  }
+
+  .plate .center {
+    width: 14px;
+    height: 14px;
+  }
+
+  .center-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .player .circ {
+    width: 22px;
+    height: 22px;
+  }
+
+  .player .rect {
+    width: 8px;
+    height: 40px;
+    margin-bottom: 3px;
+  }
+
+  .player {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+
+  /* Song info */
+  .song-title {
+    font-size: 13px;
+    padding: 2px 0;
+  }
+
+  .artist-name {
+    font-size: 9px;
+    margin-top: -4px;
+  }
+
+  /* Progress bar */
+  .progress-wrap {
+    width: 95%;
+    margin-top: 8px;
+  }
+
+  .progress-bar {
+    height: 4px;
+  }
+
+  .progress-thumb {
+    width: 10px;
+    height: 10px;
+  }
+
+  .time-row {
+    font-size: 10px;
+  }
+
+  /* Controls */
+  .controls-row {
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .karaoke-btn,
+  .loop-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .play-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .vol-icon {
+    font-size: 14px;
+  }
+
+  #volumeSlider {
+    width: 40px;
+    height: 3px;
+  }
+
+  .fa-play {
+    width: 16px;
+    height: 16px;
+    margin: 0px 0 0 2px;
+  }
+
+  /* Lyrics */
+  .lyrics-container {
+    max-height: 160px;
+    padding: 12px 10px;
+    border-width: 3px;
+    border-radius: 10px;
+  }
+
+  .lyric-box p {
+    font-size: 11px;
+    line-height: 1.8;
+    padding: 1px 6px;
+  }
+
+  .lyrics-title {
+    font-size: 11px;
+  }
+
+  /* Watermark */
+  .lyrics-box-wrap #watermark,
+  .lyrics-box-wrap #name {
+    font-size: 6px;
+  }
+}
