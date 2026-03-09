@@ -135,10 +135,8 @@ body {
   width: 100%; max-width: 900px;
   min-height: 420px;
 
-  /* flex-direction: column; */ /*For Mobile*/
-  flex-direction: row; /*For Desktop*/
-  /* flex-wrap: wrap; For Mobile; */
-  flex-wrap: nowrap; /*For Desktop; */
+  flex-direction: row; 
+  flex-wrap: nowrap; 
   justify-content: center;
 }
 

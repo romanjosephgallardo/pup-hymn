@@ -167,13 +167,13 @@
 
   /* Song info */
   .song-title {
-    font-size: 13px;
-    padding: 2px 0;
+    font-size: 14px;
+    padding: 0px 0;
   }
 
   .artist-name {
-    font-size: 9px;
-    margin-top: -4px;
+    font-size: 8px;
+    margin-top: -2px;
   }
 
   /* Progress bar */
