@@ -18,7 +18,7 @@
   --PlayfairDisplay: "Playfair Display", serif;
 }
 
-/* Fonts */
+/* ===== Fonts ===== */
 @font-face {
   font-family: "Apple Garamond";
   src:
@@ -44,7 +44,7 @@ body {
   background-attachment: fixed;
 }
 
-/* Title Modal */
+/* ===== Title Modal ===== */
 .title-content {
   position: absolute;
   top: 50%;
@@ -114,7 +114,7 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Music Player Section */
+/* ===== Music Player Section =====*/
 .music-player {
   position: absolute;
   top: 50%;
@@ -283,7 +283,7 @@ body {
 }
 
 
-/* Progress Bar */
+/* ===== Progress Bar ===== */
 .progress-wrap {
   width: 80%;
   display: flex;
