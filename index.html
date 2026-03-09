@@ -51,10 +51,26 @@
 
             <div class="song-info">
                 <h2 class="song-title">The PUP Hymn (Imno ng PUP)</h2>
-                <p class="artist-name">Polytechnic University of the Philippines</p>
+                <p class="artist-name">S. Calabig, S. Rolda, and R. Amaranto</p>
             </div>
-            <audio controls>
-                <source src="assets/audio/pup_hymn.mp3" type="audio/mpeg">
+
+            <!-- Progress Bar -->
+            <div class="progress-wrap">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill">
+                    <div class="progress-thumb"></div>
+                    </div>
+                </div>
+
+                <div class="time-row">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">1:52</span>
+                </div>
+            </div>
+
+            <!-- Audio Element -->
+            <audio id="pupAudio" >
+                <source src="/assets/mp3/imno_ng_pup.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
