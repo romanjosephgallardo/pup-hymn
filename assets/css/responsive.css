@@ -81,6 +81,12 @@
     font-size: 18px;
   }
 
+  .fa-play {
+    width: 16px;
+    height: 16px;
+    margin: -2px 0 0 2px;
+  }
+
   #volumeSlider {
     width: 60px;
   }
@@ -226,7 +232,7 @@
   .fa-play {
     width: 16px;
     height: 16px;
-    margin: 0px 0 0 2px;
+    margin: -2px 0 0 2px;
   }
 
   /* Lyrics */
