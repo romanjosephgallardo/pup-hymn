@@ -1,4 +1,4 @@
-// ===== Get Elements =====
+// ===== Elements =====
 var audio = document.getElementById("pupAudio");
 var playPauseBtn = document.getElementById("playPauseBtn");
 var playIcon = document.getElementById("playIcon");
@@ -31,13 +31,6 @@ playPauseBtn.addEventListener("click", function () {
 loopBtn.addEventListener("click", function () {
   audio.loop = !audio.loop;
   loopBtn.classList.toggle("active");
-});
-
-// ===== Karaoke Toggle (show/hide lyrics) =====
-karaokeBtn.addEventListener("click", function () {
-  var lyricsContainer = document.querySelector(".lyrics-container");
-  lyricsContainer.classList.toggle("karaoke-mode");
-  karaokeBtn.classList.toggle("active");
 });
 
 // ===== Volume =====
@@ -118,3 +111,28 @@ function formatTime(sec) {
   var s = Math.floor(sec % 60);
   return m + ":" + (s < 10 ? "0" : "") + s;
 }
+
+// ===== Karaoke Toggle (switch to backing track) =====
+karaokeBtn.addEventListener("click", function () {
+  var wasPlaying = !audio.paused;
+  var currentTime = audio.currentTime;
+
+  if (!karaokeBtn.classList.contains("active")) {
+    // Switch to backing track
+    audio.src = "/assets/mp3/imno_ng_pup_backing_track.mp3";
+  } else {
+    // Switch back to original
+    audio.src = "/assets/mp3/imno_ng_pup.mp3";
+  }
+
+  karaokeBtn.classList.toggle("active");
+
+  // Keep the same position and play state
+  audio.addEventListener("loadedmetadata", function onLoad() {
+    audio.currentTime = currentTime;
+    if (wasPlaying) {
+      audio.play();
+    }
+    audio.removeEventListener("loadedmetadata", onLoad);
+  });
+});
