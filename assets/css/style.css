@@ -142,10 +142,17 @@ body {
   background: var(--off-white);
   border-radius: 16px;
   padding: 40px;
-  width: 60%;
-  max-width: 60%;
   min-width: auto;
-  min-height: 20%;
+  width: 100%; max-width: 900px;
+  min-height: 420px;
+
+
+
+  /* flex-direction: column; */ /*For Mobile*/
+  flex-direction: row; /*For Desktop*/
+  /* flex-wrap: wrap; For Mobile; */
+  flex-wrap: nowrap; /*For Desktop; */
+  justify-content: center;
 }
 
 .cd-container {
@@ -172,3 +179,110 @@ body {
   color: var(--off-white);
 }
 
+/* Vinyl Art */
+/* From Uiverse.io by TheAbieza */ 
+.container {
+  width: 250px;
+  height: 250px;
+  background-color: var(--maroon); /* visible against white page */
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 6px 6px 0 0 var(--gold);
+  margin: 0 auto;
+}
+
+.plate {
+  width: fit-content;
+}
+
+.plate .black,
+.plate .white,
+.plate .center,
+.plate .border {
+  border-radius: 100%;
+}
+
+.container,
+.plate .black,
+.plate .white,
+.plate .border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plate .black {
+  width: 200px;
+  height: 200px;
+  background-color: var(--text-dark); /* darker vinyl */
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.plate .white {
+  width: 50px;
+  height: 50px;
+  background-color: var(--off-white);
+}
+
+.plate .center {
+  width: 20px;
+  height: 20px;
+  background-color: var(--yellow);
+}
+
+.plate .border {
+  width: 165px;
+  height: 165px;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+  border-left: 3px solid var(--text-dark);
+  border-right: 3px solid var(--text-dark);
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  rotate: -45deg;
+}
+
+.player .circ {
+  width: 45px;
+  height: 45px;
+  background-color: var(--gold);
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.player .rect {
+  width: 15px;
+  height: 85px;
+  background-color: var(--gold);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+.center-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+}
