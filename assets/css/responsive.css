@@ -109,9 +109,11 @@
   .music-player {
     padding: 16px;
     gap: 12px;
-    max-width: 90vw;
+    max-width: 70%;
+    min-width: 280px;
     border-width: 4px;
     border-radius: 12px;
+    overflow: hidden;
   }
 
   /* Vinyl — smaller */
@@ -236,10 +238,29 @@
   }
 
   .lyric-box p {
-    font-size: 11px;
-    line-height: 1.8;
+    font-size: 9px;
+    line-height: 18px;
     padding: 1px 6px;
+    overflow-wrap: break-word;
   }
+
+  .lyric-box p.active {
+    color: var(--maroon);
+    font-weight: 700;
+    font-size: 10px;
+    transform: scale(1.08);
+    margin-left: 7px;
+  }
+
+  .lyric-box #writers {
+    font-family: var(--Poppins);
+    font-size: 7px;
+    color: var(--maroon);
+    font-weight: 600;
+    margin-top: 8px;
+    line-height: 12px;
+}
+
 
   .lyrics-title {
     font-size: 11px;
