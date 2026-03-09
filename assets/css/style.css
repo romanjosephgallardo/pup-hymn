@@ -13,22 +13,12 @@
   --text-dark: #2a0a0a;
 
   /* Font Naming Assigning */
-  --Poppins: "mod-Poppins", sans-serif;
+  --Poppins: "Poppins", sans-serif;
   --AppleGaramond: "Apple Garamond", sans-serif;
   --PlayfairDisplay: "Playfair Display", serif;
 }
 
 /* Fonts */
-@font-face {
-  font-family: "mod-Poppins";
-  src:
-    url("../fonts/Poppins.ttf") format("ttf"),
-    url("../fonts/Poppins.woff") format("woff"),
-    url("../fonts/Poppins.woff2") format("woff2");
-  font-style: normal;
-  font-weight: normal;
-}
-
 @font-face {
   font-family: "Apple Garamond";
   src:
@@ -188,7 +178,7 @@ body {
   border-radius: 10px;
   position: relative;
   box-shadow: 6px 6px 0 0 var(--gold);
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
 
 .plate {
@@ -285,4 +275,17 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--gold);
+}
+/* End of Vinyl Art */
+
+
+/* Song Info */
+.song-title {
+  font-family: var(--Poppins);
+  font-size: 22px; 
+  font-weight: bolder;
+  color: var(--maroon);
+  text-align: center; 
+  text-transform: uppercase;
+  padding: 12px 0 12px 0;
 }
