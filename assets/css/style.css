@@ -11,30 +11,8 @@
   --off-white: #f9f4ec;
   --gold: #d4a017;
   --text-dark: #2a0a0a;
-
-  /* Font Naming Assigning */
-  /* --Poppins: "Poppins", sans-serif;
-  --AppleGaramond: "Apple Garamond", sans-serif;
-  --PlayfairDisplay: "Playfair Display", serif; */
 }
 
-/* ===== Fonts ===== */
-/* @font-face {
-  font-family: "Apple Garamond";
-  src:
-    url("../fonts/AppleGaramond.ttf") format("ttf"),
-    url("../fonts/AppleGaramond.woff") format("woff"),
-    url("../fonts/AppleGaramond.woff2") format("woff2");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/PlayfairDisplay-Regular.ttf") format("ttf");
-  font-style: normal;
-  font-weight: normal;
-} */
 
 body {
   margin: 0;
@@ -45,75 +23,6 @@ body {
   background-attachment: fixed;
 }
 
-/* ===== Title Modal ===== */
-.title-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--off-white);
-}
-
-.pup-logo {
-  width: 150px;
-  height: auto;
-  margin: 0 0 15px 0;
-}
-
-.title-content h3 {
-  font-family: var(--Poppins);
-  color: var(--yellow);
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  line-height: 25px;
-}
-
-.title-content h1 {
-  font-family: var(--PlayfairDisplay);
-  font-size: 150px;
-  font-weight: bold;
-  letter-spacing: -3px;
-  line-height: 120px;
-  font-weight: bolder;
-  margin: 20px 0 53px 0;
-}
-
-.divider {
-  width: 300px;
-  height: 3.5px;
-  background-color: var(--yellow);
-  margin: 20px auto;
-}
-
-.title-content h2 {
-  font-family: var(--AppleGaramond);
-  font-size: 36px;
-  font-style: italic;
-  color: var(--off-white);
-  font-weight: 100;
-  margin: 32px 0 36px 0;
-  letter-spacing: 5px;
-}
-
-.listen-btn {
-  background-color: var(--yellow);
-  color: var(--maroon);
-  font-size: 18px;
-  font-family: var(--Poppins);
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  border: none;
-  border-radius: 100px;
-  padding: 15px 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
 /* ===== Music Player Section =====*/
 .music-player {
