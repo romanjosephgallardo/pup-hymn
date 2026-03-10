@@ -102,11 +102,40 @@ audio.addEventListener("loadedmetadata", function () {
   totalTimeEl.textContent = formatTime(audio.duration);
 });
 
-// ===== Click to Seek =====
-progressBar.addEventListener("click", function (e) {
-  var rect = this.getBoundingClientRect();
-  var percent = (e.clientX - rect.left) / rect.width;
+// ===== Click & Drag to Seek =====
+var isDragging = false;
+
+function seekFromEvent(e) {
+  var rect = progressBar.getBoundingClientRect();
+  var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  var percent = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
   audio.currentTime = percent * audio.duration;
+}
+
+progressBar.addEventListener("mousedown", function (e) {
+  isDragging = true;
+  seekFromEvent(e);
+});
+
+document.addEventListener("mousemove", function (e) {
+  if (isDragging) seekFromEvent(e);
+});
+
+document.addEventListener("mouseup", function () {
+  isDragging = false;
+});
+
+progressBar.addEventListener("touchstart", function (e) {
+  isDragging = true;
+  seekFromEvent(e);
+}, { passive: true });
+
+document.addEventListener("touchmove", function (e) {
+  if (isDragging) seekFromEvent(e);
+}, { passive: true });
+
+document.addEventListener("touchend", function () {
+  isDragging = false;
 });
 
 // ===== Reset on End =====
